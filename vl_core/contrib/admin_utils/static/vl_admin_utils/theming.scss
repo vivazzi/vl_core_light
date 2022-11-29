@@ -1,0 +1,36 @@
+.language_button:not(.selected) {background: #bbb;}
+
+.inline-group {
+    overflow: auto;
+    .aligned label {width: auto;}
+
+    .tabular {
+        td.original p {visibility: hidden;height: 0;}
+        tr.has_original td {padding-top: inherit;}
+    }
+}
+
+textarea.cke_source {max-height: initial;}
+
+fieldset .fieldBox {margin: 10px 20px 10px 0;}
+.fieldBox {
+    label {float: none;}
+    .readonly {margin-left: 0!important;}
+    .help {margin-left: 0!important;margin-top:4px!important;padding-left: 0!important;}
+    .vCheckboxLabel {padding-top: 8px;}
+}
+
+@media (max-width: 1024px) {
+    .dashboard-container {padding-top: 1px;}
+    .dashboard-column {float: none!important;width: 100%!important;min-height: initial;}
+    .dashboard-module {overflow: hidden;margin: 18px 0;}
+    .dashboard .stacked {max-width: initial;}
+
+    .aligned label {padding-top: 0;}
+    fieldset .fieldBox {padding-left: 0;margin: 0 0 10px 0!important;}
+}
+
+@media (max-width: 767px) {
+    .aligned .form-row input[type=checkbox] {flex-grow: 0;flex-shrink: 0;margin-top: 0;}
+    .fieldBox .vCheckboxLabel {padding-top: 0;}
+}

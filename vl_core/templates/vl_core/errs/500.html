@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <title>{% trans 'Site program error' %}</title>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h1>{% trans 'Site program error' %}</h1>
+<p>{% trans 'Sorry, but there was a programming error on page.' %}</p>
+<p>{% trans 'A notification has already been sent to technical support.' %}</p>
+<p>{% trans 'Return to' %} <a href="/">{% trans 'home page' context 'Return to home page' %}</a></p>
+<p>{% trans 'Error code' %}: 500 (Program Error)</p>
+</body>
+</html>

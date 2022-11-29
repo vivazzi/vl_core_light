@@ -1,0 +1,2 @@
+{% load vl_math %}
+<img class="th {% if th_type %}th_{{ th_type }}{% endif %}"{% if alt %} alt="{{ alt }}" {% endif %}src="{{ url }}" style="{% if width %}width: 100%;max-width: {{ width|replace_comma_to_point }}px;{% endif %}{% if height %}max-height: {{ height|replace_comma_to_point }}px;{% endif %}"/>

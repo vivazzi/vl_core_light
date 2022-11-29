@@ -1,0 +1,24 @@
+{% load i18n %}
+<div class="color_picker">
+    {{ input_html }}
+    <div class="picker_wr">
+        {% if old_color %}<div class="color old_color" style="background-color: {{ old_color }}"></div>{% endif %}
+        <div class="color new_color{% if not old_color %} full_height{% endif %}">
+            <input class="picker" maxlength="7" type="color">
+        </div>
+    </div>
+    {% if use_opacity %}
+        <div class="opacity_wr">
+            <p>{% trans 'Transparency' %} <span>100</span>%</p>
+            <input type="range" min="0" max="100" class="range" value="100">
+        </div>
+    {% endif %}
+</div>
+
+<script>
+    (function($){
+        $('#id_{{ name }}').color_picker({
+            {% if color %}'color': '{{ color }}'{% endif %}
+        });
+    })(django.jQuery);
+</script>

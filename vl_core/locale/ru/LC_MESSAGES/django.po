@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-15 12:56+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: apps.py:8
+msgid "VL Core"
+msgstr "VL Ядро"
+
+
+
+#: cms_toolbars.py:15 cms_toolbars.py:48
+msgid "User settings"
+msgstr "Настройки пользователя"
+
+#: cms_toolbars.py:36
+msgid "Site settings"
+msgstr "Настройки сайта"
+
+#: cms_toolbars.py:40
+msgid "Page types"
+msgstr "Типы страниц"
+
+#: cms_toolbars.py:44
+msgid "Users and groups"
+msgstr "Пользователи и группы"
+
+#: cms_toolbars.py:46
+msgid "Groups"
+msgstr "Группы"
+
+#: cms_toolbars.py:50
+msgid "Technical settings"
+msgstr "Технические настройки"
+
+#: cms_toolbars.py:52
+msgid "Site utils"
+msgstr "Утилиты сайта"
+
+#: cms_toolbars.py:53
+msgid "Data size and backups"
+msgstr "Размер данных и резервные копии"
+
+#: cms_toolbars.py:56
+msgid "Help"
+msgstr "Помощь"
+
+#: cms_toolbars.py:58
+msgid "Site administration"
+msgstr "Администрирование сайта"
+
+#: cms_toolbars.py:61
+msgid "Django CMS User Guide"
+msgstr "Руководство пользователя Django CMS"
+
+#: cms_toolbars.py:65
+msgid "Page"
+msgstr "Страница"
+
+#: constants.py:4
+msgid "Basic"
+msgstr "Базовые"
+
+#: constants.py:5
+msgid "Decoration"
+msgstr "Оформление"
+
+#: constants.py:6
+msgid "Navigation"
+msgstr "Навигация"
+
+#: constants.py:7
+msgid "Additional"
+msgstr "Дополнительные"
+
+#: constants.py:8
+msgid "Specific"
+msgstr "Специфические"
+
+#: constants.py:12
+msgid "Displayed only in the admin"
+msgstr "Отображается только в административной части"
+
+#: constants.py:14
+msgid "The part of the title used in the URL.<br/>If you get an error about the existence of a path, come up with a new one. For example: path-2"
+msgstr "Часть заголовка, используемая в URL.<br/>При возникновении ошибки о существовании пути, придумайте новый. Например: path-2"
+
+#: constants.py:17
+msgid "Appears when you hover the mouse over an object"
+msgstr "Появляется при наведении мышкой на объект"
+
+#: constants.py:19
+msgid "By default, search robots are not allowed to follow external links, while internal links are allowed.<br/>This allows you not to reduce the position of the site in the search engines.<br/>More details on the page: <a target=\"_blank\" href=\"https://vits.pro/info/site-positions/\">Site positions in search engines</a>"
+msgstr "По умолчанию переход поисковыми роботами по внешним ссылкам запрещён, а для внутренних - разрешён.<br/>Это позволяет не снижать позиции сайта в поисковых системах.<br/>Подробнее на странице: <a target=\"_blank\" href=\"https://vits.pro/info/site-positions/\">Позиции сайта в поисковых системах</a>"
+
+#: constants.py:24
+msgid "Examples: #545454, rgb(9,18,12), rgba(20,0,0,0.5), rgba(0,0,0,0)"
+msgstr "Примеры: #545454, rgb(9,18,12), rgba(20,0,0,0.5), rgba(0,0,0,0)"
+
+#: constants.py:35
+msgid "Default"
+msgstr "По умолчанию"
+
+#: constants.py:35
+msgid "Yes"
+msgstr "Да"
+
+#: constants.py:35
+msgid "No"
+msgstr "Нет"
+
+#: fields.py:47
+msgid "A valid time period is required"
+msgstr "Требуется правильный временной период"
+
+#: template_pool.py:82
+msgid "Template class \"{obj.template}\" is not found"
+msgstr "Класс шаблона \"{obj.template}\" не найден"
+
+#: templates/vl_core/errs/400.html:10
+msgid "Unable to process request"
+msgstr "Невозможно обработать запрос"
+
+#: templates/vl_core/errs/400.html:11
+msgid "Try refresh the page later. If it does not help, try clearing your cookies and refreshing the site again."
+msgstr "Попробуйте обновить страницу позже. Если не помогает, попробуйте почистить куки и снова обновить сайт."
+
+#: templates/vl_core/errs/400.html:12 templates/vl_core/errs/500.html:14
+msgid "Error code"
+msgstr "Код ошибки"
+
+#: templates/vl_core/errs/403.html:4
+msgid "Insufficient rights"
+msgstr "Недостаточно прав"
+
+#: templates/vl_core/errs/403.html:11
+msgid "Not have permission to view the information"
+msgstr "Недостаточно прав для просмотра информации"
+
+#: templates/vl_core/errs/403.html:12
+msgid "If you think this is a mistake, then contact the site support."
+msgstr "Если вы считаете это ошибкой, то обратитесь к поддержке сайта."
+
+#: templates/vl_core/errs/404.html:4
+msgid "Page not found"
+msgstr "Страница не найдена"
+
+#: templates/vl_core/errs/404.html:11
+msgid "The requested page was not found"
+msgstr "Запрашиваемая страница не найдена"
+
+#: templates/vl_core/errs/404.html:12
+msgid "The path in the address bar may be incorrect, or the page may have been deleted."
+msgstr "Возможно, неправильно указан путь в адресной строке или страница была удалена."
+
+#: templates/vl_core/errs/404.html:13 templates/vl_core/errs/500.html:13
+msgid "Return to"
+msgstr "Вернуться на"
+
+#: templates/vl_core/errs/404.html:13 templates/vl_core/errs/500.html:13
+msgctxt "Return to home page"
+msgid "home page"
+msgstr "главную страницу"
+
+#: templates/vl_core/errs/500.html:6 templates/vl_core/errs/500.html:10
+msgid "Site program error"
+msgstr "Программная ошибка сайта"
+
+#: templates/vl_core/errs/500.html:11
+msgid "Sorry, but there was a programming error on page."
+msgstr "Извините, но на странице возникла программная ошибка."
+
+#: templates/vl_core/errs/500.html:12
+msgid "A notification has already been sent to technical support."
+msgstr "В техническую поддержку уже отправлено уведомление."
+
+#: templates/vl_core/template_is_not_found.html:3
+msgid "Error"
+msgstr "Ошибка"
+
+#: templates/vl_core/template_is_not_found.html:3
+msgid "is not found"
+msgstr "не найден"
+
+#: templates/vl_core/widgets/color_picker.html:11
+msgid "Transparency"
+msgstr "Прозрачность"
+
+#: utils/core.py:134 utils/core.py:157
+msgid "w"
+msgstr "н"
+
+#: utils/core.py:135 utils/core.py:158 widgets.py:68
+msgid "d"
+msgstr "д"
+
+#: utils/core.py:136 utils/core.py:159 widgets.py:68
+msgid "h"
+msgstr "ч"
+
+#: utils/core.py:137 utils/core.py:160 widgets.py:68
+msgid "m"
+msgstr "м"
+
+#: utils/core.py:140 widgets.py:68
+msgid "sec"
+msgstr "сек"

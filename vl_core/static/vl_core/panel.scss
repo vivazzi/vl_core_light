@@ -1,0 +1,32 @@
+@import "vars";
+
+.panel {
+    margin: 20px 0;
+
+    .t {padding: 10px 20px;font-size: 1.2em;}
+    .c {border-style: solid;border-width: 0 1px 1px;padding: 10px;font-size: 1.1em;}
+
+    // default
+    & {
+        .t {background-color: $brand_color_grey;color: #fff;}
+        .c {background-color: $brand_color_grey_light_bg;border-color: $brand_color_grey;}
+    }
+
+    // info
+    &.i {
+        .t {background-color: $brand_color_blue;color: #fff;}
+        .c {background-color: $brand_color_blue_light_bg;border-color: $brand_color_blue;}
+    }
+
+    // warning
+    &.w {
+        .t {background-color: $brand_color_yellow;color: #fff;}
+        .c {background-color: $brand_color_yellow_light_bg;border-color: $brand_color_yellow;}
+    }
+
+    // error
+    &.e {
+        .t {background-color: $brand_color_red;color: #fff;}
+        .c {background-color: $brand_color_red_light_bg;border-color: $brand_color_red;}
+    }
+}

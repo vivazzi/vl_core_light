@@ -1,0 +1,9 @@
+.pic_input_widget {width: 100%;}
+.th_c {margin-top: 10px;}
+.th {
+    background-size: contain;background-repeat: no-repeat;
+    &.th_cover {background-position: 50%;}
+}
+@media (max-width: 767px) {
+    .pic_input_widget input {width: 100%!important;box-sizing: border-box;}
+}

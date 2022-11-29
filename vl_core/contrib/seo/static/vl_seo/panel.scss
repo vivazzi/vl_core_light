@@ -1,0 +1,32 @@
+@import "../../../../static/vl_core/vars";
+
+.panel {
+    margin: 20px 0;
+
+    .t_wr {display: flex;align-items: center;border: 2px solid}
+
+    .t {
+        padding: 10px 20px;font-size: 1.2em;
+        a {
+            color: #fff;
+            &:hover {text-decoration: underline;}
+        }
+    }
+    .t_2 {padding: 10px 20px;background-color: #fff;flex-grow: 1;}
+    .c {border-style: solid;border-width: 0 1px 1px;padding: 10px;font-size: 1.1em;}
+
+    &.fixed_height .c {max-height: 300px;overflow: auto;}
+
+    // themes
+    & {
+        .t_wr {border-color: $brand_color_grey}
+        .t {background-color: $brand_color_grey;color: #fff;}
+        .c {background-color: $brand_color_grey_light_bg;border-color: $brand_color_grey;}
+    }
+
+    &.i {
+        .t_wr {border-color: $brand_color_blue}
+        .t {background-color: $brand_color_blue;color: #fff;}
+        .c {background-color: $brand_color_blue_light_bg;border-color: $brand_color_blue;}
+    }
+}

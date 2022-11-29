@@ -1,0 +1,19 @@
+.fb_c {
+    .open_original {
+        position: absolute;top:0;right:0;width: 24px;height:24px;background-color: #ffffffba;align-items: center;justify-content: center;
+        //display: flex;
+        display: none;
+        a {
+            color: #666!important;cursor: pointer;
+            &:hover {color: #333!important;}
+        }
+        svg {width: 16px;}
+    }
+    .fb {
+        position: relative;display: inline-block;cursor: pointer;
+        &:hover {
+            background-color: #eee;
+            .open_original {display: flex;}
+        }
+    }
+}

@@ -1,0 +1,1 @@
+if (window.django !== undefined) var jQuery = django.jQuery, $ = django.jQuery;

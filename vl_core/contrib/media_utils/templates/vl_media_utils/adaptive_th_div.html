@@ -1,0 +1,4 @@
+{% load vl_math %}
+<div class="th_c" style="max-width: {{ width }}px;width: 100%">
+    <div class="th {% if th_type %}th_{{ th_type }}{% endif %}" style="background-image: url('{{ url }}');width: 100%;padding-top: {{ ratio_percent }}%;{% if th_type %}background-size: {{ th_type }};{% endif %}"></div>
+</div>

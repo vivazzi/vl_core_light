@@ -1,0 +1,49 @@
+p .mes {
+  margin-top: -6px;
+  margin-bottom: -6px;
+}
+
+.mes {
+  border: 1px solid;
+  padding: 6px 12px;
+  color: #000;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.mes.inline {
+  display: inline-block;
+}
+.mes p {
+  font-size: inherit;
+}
+.mes {
+  background-color: #efefef;
+  border-color: #dcdcdc;
+}
+.mes.s {
+  background-color: #dff0d8;
+  border-color: #C7D8C0;
+}
+.mes.w {
+  background-color: #fcf8e3;
+  border-color: #ebe7d2;
+}
+.mes.e {
+  background-color: #f2dede;
+  border-color: #dcc8c8;
+}
+.mes.i {
+  background-color: #d9f0f2;
+  border-color: #cae2f2;
+}
+.mes.sm {
+  padding: 2px 6px;
+  font-size: 0.85em;
+  border-radius: 4px;
+}
+.mes h1, .mes h2, .mes h3, .mes h4 {
+  margin-top: 15px !important;
+}
+
+/*# sourceMappingURL=mes.css.map */

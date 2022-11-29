@@ -1,0 +1,5 @@
+.image_base64_widget {width: 100%;}
+
+@media (max-width: 767px) {
+    .aligned .form-row .image_base64_widget input {width: 100%!important;box-sizing: border-box;}
+}

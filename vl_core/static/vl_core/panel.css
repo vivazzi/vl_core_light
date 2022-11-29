@@ -1,0 +1,47 @@
+.panel {
+  margin: 20px 0;
+}
+.panel .t {
+  padding: 10px 20px;
+  font-size: 1.2em;
+}
+.panel .c {
+  border-style: solid;
+  border-width: 0 1px 1px;
+  padding: 10px;
+  font-size: 1.1em;
+}
+.panel .t {
+  background-color: #8f8f8f;
+  color: #fff;
+}
+.panel .c {
+  background-color: #eee;
+  border-color: #8f8f8f;
+}
+.panel.i .t {
+  background-color: #3894bf;
+  color: #fff;
+}
+.panel.i .c {
+  background-color: #f8fdff;
+  border-color: #3894bf;
+}
+.panel.w .t {
+  background-color: #ce9030;
+  color: #fff;
+}
+.panel.w .c {
+  background-color: #fffcf8;
+  border-color: #ce9030;
+}
+.panel.e .t {
+  background-color: #bf5138;
+  color: #fff;
+}
+.panel.e .c {
+  background-color: #fff8f8;
+  border-color: #bf5138;
+}
+
+/*# sourceMappingURL=panel.css.map */

@@ -1,0 +1,2 @@
+.duration_widget input[type=number] {display: inline-block;width: 100%!important;max-width: 48px!important;}
+.duration_widget span {margin-right: 15px;}

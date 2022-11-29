@@ -1,0 +1,29 @@
+{% extends "admin/base_site.html" %}
+{% load trans from i18n %}
+{% load vite_hmr_client vite_asset from django_vite %}
+
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+        <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a> &rsaquo;
+        {{ title }}
+    </div>
+{% endblock %}
+
+
+{% block extrahead %}{{ block.super }}
+    {% vite_hmr_client config=config %}
+{% endblock %}
+
+
+{% block content %}
+    <script>
+        window.app_config = {
+            app_config_url: '{% url 'vl_backup:backup_app' %}',
+            csrf_token: '{{ csrf_token }}',
+        }
+    </script>
+
+    <div id="app"></div>
+    {% vite_asset 'contrib/backup/frontend/main.js' config=config %}
+{% endblock %}

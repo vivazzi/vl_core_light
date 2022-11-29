@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% load i18n %}
+
+{% block subtitle %}{% trans 'Insufficient rights' %}{% endblock %}
+
+{% block meta %}
+    <meta name="robots" content="noindex, nofollow">
+{% endblock %}
+
+{% block content %}
+    <h2>{% trans 'Not have permission to view the information' %}</h2>
+    <p>{% trans 'If you think this is a mistake, then contact the site support.' %}</p>
+{% endblock %}

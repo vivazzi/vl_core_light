@@ -1,0 +1,41 @@
+{% extends "admin/base_site.html" %}
+{% load i18n sass_tags vl_core %}
+
+
+{% block extrastyle %}{{ block.super }}
+    <link rel="stylesheet" href="{% sass_src 'vl_core/admin_styles.scss' %}">
+    <link rel="stylesheet" href="{% sass_src 'vl_core/mes.scss' %}">
+    <link rel="stylesheet" href="{% sass_src 'vl_seo/panel.scss' %}">
+    <link rel="stylesheet" href="{% sass_src 'vl_seo/seo.scss' %}">
+{% endblock %}
+
+
+{% block content %}
+    <p class="site_url">{% trans 'Current site' %}: <strong>{{ '/'|with_domain }}</strong> | <a href="{% url 'admin:sites_site_changelist' %}">{% trans 'change' %}</a></p>
+
+    <p><a class="button" href="{% url 'vl_seo_api:generic' %}">{% trans 'Generate robots.txt and sitemap.xml' %}</a></p><br/>
+
+    <fieldset class="module">
+
+        <div class="panel i">
+            <div class="t_wr">
+                <div class="t">{% trans 'Content of' %} robots.txt</div>
+                <div class="t_2"><a target="_blank" href="{{ robots.url }}">{{ robots.url }}</a></div>
+            </div>
+            <div class="c">
+                <pre>{{ robots.content|linebreaksbr }}</pre>
+            </div>
+        </div>
+
+        <div class="panel i fixed_height">
+            <div class="t_wr">
+                <div class="t">{% trans 'Content of' %} sitemap.xml</div>
+                <div class="t_2"><a target="_blank" href="{{ sitemap.url }}">{{ sitemap.url }}</a></div>
+            </div>
+            <div class="c">
+                <pre>{{ sitemap.content }}</pre>
+            </div>
+        </div>
+
+    </fieldset>
+{% endblock %}

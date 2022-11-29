@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+{% load i18n %}
+
+{% block subtitle %}{% trans 'Page not found' %}{% endblock %}
+
+{% block meta %}
+    <meta name="robots" content="noindex, nofollow">
+{% endblock %}
+
+{% block content %}
+    <h2>{% trans 'The requested page was not found' %}</h2>
+    <p>{% trans 'The path in the address bar may be incorrect, or the page may have been deleted.' %}</p>
+    <p>{% trans 'Return to' %} <a href="/">{% trans 'home page' context 'Return to home page' %}</a></p>
+{% endblock %}

@@ -1,0 +1,53 @@
+h2, h3 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-top: 1.8em;
+  margin-bottom: 1em;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+}
+
+h3 {
+  font-size: 1.25em;
+  margin-top: 1.75em;
+  margin-bottom: 0.9em;
+  color: #333;
+}
+
+h5 {
+  font-size: 1.2em;
+  margin-top: 1.65em;
+  margin-bottom: 0.85em;
+  color: #555;
+}
+
+h1 + h2 {
+  margin-top: 0;
+}
+
+a.button {
+  padding: 10px 15px;
+}
+
+.button_wr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.button {
+  display: inline-block;
+}
+
+pre {
+  line-height: 1.5;
+}
+
+/*# sourceMappingURL=admin_styles.css.map */

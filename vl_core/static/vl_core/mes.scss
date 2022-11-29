@@ -1,0 +1,19 @@
+p .mes {margin-top: -6px;margin-bottom: -6px;}
+
+.mes {
+    border: 1px solid;padding: 6px 12px;color: #000;font-size: .9rem;margin-top: 20px;margin-bottom: 20px;
+
+    &.inline {display: inline-block}
+
+    p {font-size: inherit;}
+
+    & {background-color: #efefef;border-color: #dcdcdc;}
+    &.s {background-color: #dff0d8;border-color: #C7D8C0;}
+    &.w {background-color: #fcf8e3;border-color: #ebe7d2;}
+    &.e {background-color: #f2dede;border-color: #dcc8c8;}
+    &.i {background-color: #d9f0f2;border-color: #cae2f2;}
+
+    &.sm {padding: 2px 6px;font-size: 0.85em;border-radius: 4px;}
+
+    h1, h2, h3, h4 {margin-top: 15px!important;}
+}

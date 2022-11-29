@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <title>Error 400 (Bad Request)</title>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h1>{% trans 'Unable to process request' %}</h1>
+<p>{% trans 'Try refresh the page later. If it does not help, try clearing your cookies and refreshing the site again.' %}</p>
+<p>{% trans 'Error code' %}: 400 (Bad Request)</p>
+</body>
+</html>

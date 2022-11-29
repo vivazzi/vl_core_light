@@ -1,0 +1,57 @@
+.panel {
+  margin: 20px 0;
+}
+.panel .t_wr {
+  display: flex;
+  align-items: center;
+  border: 2px solid;
+}
+.panel .t {
+  padding: 10px 20px;
+  font-size: 1.2em;
+}
+.panel .t a {
+  color: #fff;
+}
+.panel .t a:hover {
+  text-decoration: underline;
+}
+.panel .t_2 {
+  padding: 10px 20px;
+  background-color: #fff;
+  flex-grow: 1;
+}
+.panel .c {
+  border-style: solid;
+  border-width: 0 1px 1px;
+  padding: 10px;
+  font-size: 1.1em;
+}
+.panel.fixed_height .c {
+  max-height: 300px;
+  overflow: auto;
+}
+.panel .t_wr {
+  border-color: #8f8f8f;
+}
+.panel .t {
+  background-color: #8f8f8f;
+  color: #fff;
+}
+.panel .c {
+  background-color: #eee;
+  border-color: #8f8f8f;
+}
+.panel.i .t_wr {
+  border-color: #3894bf;
+}
+.panel.i .t {
+  background-color: #3894bf;
+  color: #fff;
+}
+.panel.i .c {
+  background-color: #f8fdff;
+  border-color: #3894bf;
+}
+
+/*# sourceMappingURL=panel.css.map */

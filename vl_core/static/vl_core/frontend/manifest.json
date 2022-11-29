@@ -1,0 +1,102 @@
+{
+  "contrib/site_utils/frontend/main.js": {
+    "file": "site_utils.690cde0b.js",
+    "src": "contrib/site_utils/frontend/main.js",
+    "isEntry": true,
+    "imports": [
+      "_locale-ac68d8a5.js"
+    ],
+    "dynamicImports": [
+      "contrib/site_utils/frontend/views/EmailTesting.vue",
+      "contrib/site_utils/frontend/views/ManagementCommands.vue",
+      "contrib/site_utils/frontend/views/Performance.vue",
+      "contrib/site_utils/frontend/views/UsedComponents.vue"
+    ],
+    "css": [
+      "site_utils.0fcdabb3.css"
+    ]
+  },
+  "contrib/backup/frontend/main.js": {
+    "file": "backup.0877d1e9.js",
+    "src": "contrib/backup/frontend/main.js",
+    "isEntry": true,
+    "imports": [
+      "_locale-ac68d8a5.js",
+      "_RingLoader-10d9841e.js",
+      "_plugin-vue_export-helper-b1e42fc4.js"
+    ],
+    "css": [
+      "backup.3b309dcc.css"
+    ]
+  },
+  "_locale-ac68d8a5.js": {
+    "file": "locale-ac68d8a5.js"
+  },
+  "_RingLoader-10d9841e.js": {
+    "file": "RingLoader-10d9841e.js",
+    "imports": [
+      "_locale-ac68d8a5.js",
+      "_plugin-vue_export-helper-b1e42fc4.js"
+    ],
+    "css": [
+      "RingLoader.f0d33d4f.css"
+    ]
+  },
+  "_plugin-vue_export-helper-b1e42fc4.js": {
+    "file": "plugin-vue_export-helper-b1e42fc4.js"
+  },
+  "contrib/site_utils/frontend/views/EmailTesting.vue": {
+    "file": "EmailTesting-d96a1e08.js",
+    "src": "contrib/site_utils/frontend/views/EmailTesting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_locale-ac68d8a5.js",
+      "_SendButton-171b7116.js",
+      "_plugin-vue_export-helper-b1e42fc4.js"
+    ]
+  },
+  "_SendButton-171b7116.js": {
+    "file": "SendButton-171b7116.js",
+    "imports": [
+      "_locale-ac68d8a5.js",
+      "_plugin-vue_export-helper-b1e42fc4.js"
+    ],
+    "css": [
+      "SendButton.5480c369.css"
+    ]
+  },
+  "contrib/site_utils/frontend/views/ManagementCommands.vue": {
+    "file": "ManagementCommands-02a0c1f4.js",
+    "src": "contrib/site_utils/frontend/views/ManagementCommands.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_locale-ac68d8a5.js",
+      "_RingLoader-10d9841e.js",
+      "_SendButton-171b7116.js",
+      "_plugin-vue_export-helper-b1e42fc4.js"
+    ],
+    "css": [
+      "ManagementCommands.40a4e515.css"
+    ]
+  },
+  "contrib/site_utils/frontend/views/Performance.vue": {
+    "file": "Performance-fb5cc091.js",
+    "src": "contrib/site_utils/frontend/views/Performance.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_locale-ac68d8a5.js",
+      "_SendButton-171b7116.js",
+      "_plugin-vue_export-helper-b1e42fc4.js"
+    ]
+  },
+  "contrib/site_utils/frontend/views/UsedComponents.vue": {
+    "file": "UsedComponents-00e1f707.js",
+    "src": "contrib/site_utils/frontend/views/UsedComponents.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_locale-ac68d8a5.js",
+      "_RingLoader-10d9841e.js",
+      "_plugin-vue_export-helper-b1e42fc4.js"
+    ]
+  }
+}

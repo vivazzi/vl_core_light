@@ -1,0 +1,224 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-15 12:56+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: apps.py:8
+msgid "VL Core"
+msgstr ""
+
+#: cms_toolbars.py:15 cms_toolbars.py:45
+msgid "Users"
+msgstr ""
+
+#: cms_toolbars.py:15 cms_toolbars.py:48
+msgid "User settings"
+msgstr ""
+
+#: cms_toolbars.py:36
+msgid "Site settings"
+msgstr ""
+
+#: cms_toolbars.py:40
+msgid "Page types"
+msgstr ""
+
+#: cms_toolbars.py:44
+msgid "Users and groups"
+msgstr ""
+
+#: cms_toolbars.py:46
+msgid "Groups"
+msgstr ""
+
+#: cms_toolbars.py:50
+msgid "Technical settings"
+msgstr ""
+
+#: cms_toolbars.py:52
+msgid "Site utils"
+msgstr ""
+
+#: cms_toolbars.py:53
+msgid "Data size and backups"
+msgstr ""
+
+#: cms_toolbars.py:56
+msgid "Help"
+msgstr ""
+
+#: cms_toolbars.py:58
+msgid "Site administration"
+msgstr ""
+
+#: cms_toolbars.py:61
+msgid "Django CMS User Guide"
+msgstr ""
+
+#: cms_toolbars.py:65
+msgid "Page"
+msgstr ""
+
+#: constants.py:4
+msgid "Basic"
+msgstr ""
+
+#: constants.py:5
+msgid "Decoration"
+msgstr ""
+
+#: constants.py:6
+msgid "Navigation"
+msgstr ""
+
+#: constants.py:7
+msgid "Additional"
+msgstr ""
+
+#: constants.py:8
+msgid "Specific"
+msgstr ""
+
+#: constants.py:12
+msgid "Displayed only in the admin"
+msgstr ""
+
+#: constants.py:14
+msgid "The part of the title used in the URL.<br/>If you get an error about the existence of a path, come up with a new one. For example: path-2"
+msgstr ""
+
+#: constants.py:17
+msgid "Appears when you hover the mouse over an object"
+msgstr ""
+
+#: constants.py:19
+msgid "By default, search robots are not allowed to follow external links, while internal links are allowed.<br/>This allows you not to reduce the position of the site in the search engines.<br/>More details on the page: <a target=\"_blank\" href=\"https://vits.pro/info/site-positions/\">Site positions in search engines</a>"
+msgstr ""
+
+#: constants.py:24
+msgid "Examples: #545454, rgb(9,18,12), rgba(20,0,0,0.5), rgba(0,0,0,0)"
+msgstr ""
+
+#: constants.py:35
+msgid "Default"
+msgstr ""
+
+#: constants.py:35
+msgid "Yes"
+msgstr ""
+
+#: constants.py:35
+msgid "No"
+msgstr ""
+
+#: fields.py:47
+msgid "A valid time period is required"
+msgstr ""
+
+#: template_pool.py:82
+#, python-brace-format
+msgid "Template class \"{obj.template}\" is not found"
+msgstr ""
+
+#: templates/vl_core/errs/400.html:10
+msgid "Unable to process request"
+msgstr ""
+
+#: templates/vl_core/errs/400.html:11
+msgid "Try refresh the page later. If it does not help, try clearing your cookies and refreshing the site again."
+msgstr ""
+
+#: templates/vl_core/errs/400.html:12 templates/vl_core/errs/500.html:14
+msgid "Error code"
+msgstr ""
+
+#: templates/vl_core/errs/403.html:4
+msgid "Insufficient rights"
+msgstr ""
+
+#: templates/vl_core/errs/403.html:11
+msgid "Not have permission to view the information"
+msgstr ""
+
+#: templates/vl_core/errs/403.html:12
+msgid "If you think this is a mistake, then contact the site support."
+msgstr ""
+
+#: templates/vl_core/errs/404.html:4
+msgid "Page not found"
+msgstr ""
+
+#: templates/vl_core/errs/404.html:11
+msgid "The requested page was not found"
+msgstr ""
+
+#: templates/vl_core/errs/404.html:12
+msgid "The path in the address bar may be incorrect, or the page may have been deleted."
+msgstr ""
+
+#: templates/vl_core/errs/404.html:13 templates/vl_core/errs/500.html:13
+msgid "Return to"
+msgstr ""
+
+#: templates/vl_core/errs/404.html:13 templates/vl_core/errs/500.html:13
+msgctxt "Return to home page"
+msgid "home page"
+msgstr ""
+
+#: templates/vl_core/errs/500.html:6 templates/vl_core/errs/500.html:10
+msgid "Site program error"
+msgstr ""
+
+#: templates/vl_core/errs/500.html:11
+msgid "Sorry, but there was a programming error on page."
+msgstr ""
+
+#: templates/vl_core/errs/500.html:12
+msgid "A notification has already been sent to technical support."
+msgstr ""
+
+#: templates/vl_core/template_is_not_found.html:3
+msgid "Error"
+msgstr ""
+
+#: templates/vl_core/template_is_not_found.html:3
+msgid "is not found"
+msgstr ""
+
+#: templates/vl_core/widgets/color_picker.html:11
+msgid "Transparency"
+msgstr ""
+
+#: utils/core.py:134 utils/core.py:157
+msgid "w"
+msgstr ""
+
+#: utils/core.py:135 utils/core.py:158 widgets.py:68
+msgid "d"
+msgstr ""
+
+#: utils/core.py:136 utils/core.py:159 widgets.py:68
+msgid "h"
+msgstr ""
+
+#: utils/core.py:137 utils/core.py:160 widgets.py:68
+msgid "m"
+msgstr ""
+
+#: utils/core.py:140 widgets.py:68
+msgid "sec"
+msgstr ""

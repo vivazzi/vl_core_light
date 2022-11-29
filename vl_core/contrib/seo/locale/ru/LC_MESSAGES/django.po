@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-15 12:56+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: contrib/seo/mixins.py:7
+msgid "Meta keywords"
+msgstr "Мета-тег keywords (ключевые слова)"
+
+#: contrib/seo/mixins.py:8
+msgid "A list of tags (keywords) separated by commas.<br>The recommended number of words is up to 10, the total number of characters is 150 characters.<br>For example: personal growth trainings, improving memory, introducing good habits"
+msgstr "Список тегов (ключевых слов), разделённых запятыми.<br>Рекомендуемое количество слов - до 10, общее количество символов - 150 символов.<br>Например: тренинги личностного роста, улучшение памяти, внедрение полезных привычек"
+
+#: contrib/seo/mixins.py:13
+msgid "Meta description"
+msgstr "Мета-тег description (описание)"
+
+#: contrib/seo/mixins.py:14
+msgid "A short description of the page. Recommended length is 120-160 characters.<br>For example: Personal growth trainings from specialists of the highest category"
+msgstr "Краткое описание страницы. Рекомендуемая длина - 120-160 символов.<br>Например: тренинги личностного роста от специалистов высшей категории"
+
+#: contrib/seo/templates/vl_seo/seo.html:14
+msgid "Current site"
+msgstr "Текущий сайт"
+
+#: contrib/seo/templates/vl_seo/seo.html:14
+msgid "change"
+msgstr "изменить"
+
+#: contrib/seo/templates/vl_seo/seo.html:16
+msgid "Generate robots.txt and sitemap.xml"
+msgstr "Сгенерировать robots.txt и sitemap.xml"
+
+#: contrib/seo/templates/vl_seo/seo.html:22
+#: contrib/seo/templates/vl_seo/seo.html:32
+msgid "Content of"
+msgstr "Содержание"
+
+#: contrib/seo/utils.py:81
+msgid "robots.txt created on the site \"{}\""
+msgstr "Создан robots.txt на сайте \"{}\""
+
+#: contrib/seo/utils.py:82 contrib/seo/utils.py:93
+msgid "{}. Previously, this file was missing or it was deleted"
+msgstr "{}. Раньше этот файл отсутствовал или он был удалён"
+
+#: contrib/seo/utils.py:92
+msgid "Generated sitemap.xml on the site \"{}\""
+msgstr "Сгенерирован sitemap.xml на сайте \"{}\""
+
+#: contrib/seo/views.py:22
+msgid "Empty"
+msgstr "Пустой"
+
+#: contrib/seo/views.py:46
+msgid "Generated sitemap without notifying search engines, since DEBUG mode is enabled"
+msgstr "Сгенерирована карта сайта без оповещения в поисковые системы, так как включён режим DEBUG"
+
+#: contrib/seo/views.py:48
+msgid "Generated sitemap with notification to search engines"
+msgstr "Сгенерирована карта сайта с оповещением в поисковые системы"

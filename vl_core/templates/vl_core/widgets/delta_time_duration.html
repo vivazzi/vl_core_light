@@ -1,0 +1,7 @@
+{% spaceless %}
+    <div class="duration_widget">
+        {% for widget in widget.subwidgets %}
+            <span>{% include widget.template_name %} {{ widget.label }}</span>
+        {% endfor %}
+    </div>
+{% endspaceless %}

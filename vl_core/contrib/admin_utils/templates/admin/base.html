@@ -1,0 +1,9 @@
+{% extends "admin/base.html" %}
+{% load vl_admin_utils static %}
+
+{# we need use blockbots block insead of extrastyle to add custom theming to end of head tag in html to avoid redundant !important in styles #}
+{% block blockbots %}
+    {{ block.super }}
+    <link rel="stylesheet" media="screen" href="{% theming_url %}" />
+    <link rel="shortcut icon" href="{% admin_favicon_url %}">
+{% endblock %}
