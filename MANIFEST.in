@@ -1,0 +1,19 @@
+include AUTHORS
+include LICENSE
+include README.md
+recursive-include vl_core/locale *
+recursive-include vl_core/static *
+recursive-include vl_core/templates *
+recursive-include vl_core/contrib/admin_utils/locale *
+recursive-include vl_core/contrib/admin_utils/static *
+recursive-include vl_core/contrib/admin_utils/templates *
+recursive-include vl_core/contrib/backup/locale *
+recursive-include vl_core/contrib/backup/templates *
+recursive-include vl_core/contrib/media_utils/locale *
+recursive-include vl_core/contrib/media_utils/static *
+recursive-include vl_core/contrib/media_utils/templates *
+recursive-include vl_core/contrib/seo/locale *
+recursive-include vl_core/contrib/seo/static *
+recursive-include vl_core/contrib/seo/templates *
+recursive-include vl_core/contrib/site_utils/locale *
+recursive-include vl_core/contrib/site_utils/templates *
