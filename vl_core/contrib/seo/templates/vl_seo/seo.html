@@ -1,12 +1,12 @@
 {% extends "admin/base_site.html" %}
-{% load i18n sass_tags vl_core %}
+{% load i18n static vl_core %}
 
 
 {% block extrastyle %}{{ block.super }}
-    <link rel="stylesheet" href="{% sass_src 'vl_core/admin_styles.scss' %}">
-    <link rel="stylesheet" href="{% sass_src 'vl_core/mes.scss' %}">
-    <link rel="stylesheet" href="{% sass_src 'vl_seo/panel.scss' %}">
-    <link rel="stylesheet" href="{% sass_src 'vl_seo/seo.scss' %}">
+    <link rel="stylesheet" href="{% static 'vl_core/admin_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'vl_core/mes.css' %}">
+    <link rel="stylesheet" href="{% static 'vl_seo/panel.css' %}">
+    <link rel="stylesheet" href="{% static 'vl_seo/seo.css' %}">
 {% endblock %}
 
 

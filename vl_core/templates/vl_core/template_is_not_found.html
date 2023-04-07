@@ -1,3 +1,3 @@
-{% load sass_tags i18n %}
-<link rel="stylesheet" href="{% sass_src 'vl_core/mes.scss' %}">
+{% load static i18n %}
+<link rel="stylesheet" href="{% static 'vl_core/mes.css' %}">
 <div class="mes e">{% trans 'Error' %}: {% if mes %}{{ mes }}{% else %}<strong>{{ required_template }}</strong> {% trans 'is not found' %} in <strong>{{ instance.template }}</strong>{% endif %}</div>
