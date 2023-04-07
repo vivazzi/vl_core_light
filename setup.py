@@ -35,7 +35,6 @@ setup(
     install_requires=[
         'django>=3.2.6',
         'django-file-resubmit>=0.5.2',
-        'django-sass-processor>=1.0.1',
         'django-select2>=7.7.1',
         'unidecode>=1.3.0',
     ],
