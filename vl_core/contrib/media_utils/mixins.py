@@ -122,7 +122,6 @@ class PicModelMixin(FileModelMixin):
 
 class FBThumbMediaMixin:
     class Media:
-        # note: we cannot use import "from sass_processor.processor import sass_processor" (it is appeared bug with imports)
         css = {'all': ['vl_media_utils/th.css', 'vl_media_utils/contrib/fancybox/fancybox.css', 'vl_media_utils/fb_wr.css']}
 
 

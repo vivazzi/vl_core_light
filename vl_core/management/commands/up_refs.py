@@ -10,7 +10,7 @@ class AppDoesNotFound(Exception):
 
 
 def get_repo_dir(app):
-    local_pipfile_path = join(settings.ROOT_DIR, 'local', 'Pipfile')
+    local_pipfile_path = join(settings.BASE_DIR, 'local', 'Pipfile')
     if not exists(local_pipfile_path):
         raise Exception(f'You need has {local_pipfile_path}')
 
@@ -26,13 +26,13 @@ class Command(BaseCommand):
     help = 'Update version of refs of repositories from local path'
 
     def handle(self, *args, **options):
-        pipfile_lock_path = join(settings.ROOT_DIR, 'Pipfile.lock')
+        pipfile_lock_path = join(settings.BASE_DIR, 'Pipfile.lock')
 
         with open(pipfile_lock_path, 'r', encoding='utf-8') as f:
             lock = json.loads(f.read())
 
         # find apps
-        pipfile_path = join(settings.ROOT_DIR, 'Pipfile')
+        pipfile_path = join(settings.BASE_DIR, 'Pipfile')
         with open(pipfile_path, 'r', encoding='utf-8') as f:
             apps = [line.split(' ', maxsplit=1)[0].replace('_', '-') for line in f if ', git =' in line]
 

@@ -8,8 +8,6 @@ from django.utils.translation import gettext as _
 
 from django_select2.forms import Select2Widget as BaseSelect2Widget
 
-from sass_processor.processor import sass_processor
-
 
 # noinspection PyProtectedMember
 class Select2Widget(BaseSelect2Widget):
@@ -35,7 +33,7 @@ class ColorPickerWidget(TextInput):
         self.use_opacity = use_opacity
 
     class Media:
-        css = {'all': [sass_processor('vl_core/widgets/color_picker/color_picker.scss'), ]}
+        css = {'all': ['vl_core/widgets/color_picker/color_picker.css', ]}
         extra = '' if settings.DEBUG else '.min'
         js = [f'admin/js/vendor/jquery/jquery{extra}.js', 'admin/js/jquery.init.js', 'vl_core/admin_compat.js',
               'vl_core/widgets/color_picker/color_picker.js']

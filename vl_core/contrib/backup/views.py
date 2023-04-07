@@ -58,7 +58,7 @@ def get_backups(request):
         next_backup_date = next_backup_date.timestamp()
 
     # lockfile
-    db_dir = join(dirname(settings.ROOT_DIR), 'db')
+    db_dir = join(dirname(settings.BASE_DIR), 'db')
     lockfile_path = join(db_dir, 'lockfile')
     if exists(lockfile_path):
         groups = []
@@ -123,7 +123,7 @@ def get_backups(request):
 def download_file(request, name):
     name = basename(name)  # it helps exclude bad urls such as '../some_path/' and so on
 
-    db_dir = join(dirname(settings.ROOT_DIR), 'db')
+    db_dir = join(dirname(settings.BASE_DIR), 'db')
 
     file_path = join(db_dir, name)
     if not exists(file_path):
@@ -137,7 +137,7 @@ def download_file(request, name):
 
 @user_passes_test(lambda u: u.is_superuser)
 def backup(request):
-    db_dir = join(dirname(settings.ROOT_DIR), 'db')
+    db_dir = join(dirname(settings.BASE_DIR), 'db')
     if not exists(db_dir):
         os.makedirs(db_dir)
 

@@ -42,10 +42,10 @@ def copy_file(old_path, new_dir_path, delete_path=''):
 
 class BackupModule:
     def __init__(self):
-        self.common_dir = dirname(settings.ROOT_DIR)
-        self.db_dir = join(dirname(settings.ROOT_DIR), 'db')
+        self.common_dir = dirname(settings.BASE_DIR)
+        self.db_dir = join(dirname(settings.BASE_DIR), 'db')
         self.stat_path = join(self.db_dir, 'stat')
-        self.project_name = basename(settings.ROOT_DIR)
+        self.project_name = basename(settings.BASE_DIR)
 
         self.stat = self.initial_stat
 
@@ -89,7 +89,7 @@ class BackupModule:
     @cached_property
     def venv_path(self):
         os.environ['PIPENV_IGNORE_VIRTUALENVS'] = '1'
-        result = run('pipenv --venv', stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True, cwd=settings.ROOT_DIR)
+        result = run('pipenv --venv', stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True, cwd=settings.BASE_DIR)
         if result.stderr:
             raise Exception(f'ERROR: {result.stderr}')
 
@@ -126,7 +126,7 @@ class BackupModule:
     def _create_media_backup(self, out):
         out.write('Archive media backup\n')
         tar_path = join(self.db_dir, f'media_{self.project_name}_{self.now_str}.tar.gz')
-        p = Popen(f'tar -czf {tar_path} -C {settings.ROOT_DIR} media', stdout=out, stderr=out, shell=True)
+        p = Popen(f'tar -czf {tar_path} -C {settings.BASE_DIR} media', stdout=out, stderr=out, shell=True)
         p.wait()
 
         return tar_path
@@ -135,7 +135,7 @@ class BackupModule:
         out.write('Check code backup\n')
 
         current_code_ref = None
-        master_path = join(settings.ROOT_DIR, '.git', 'refs', 'heads', 'master')
+        master_path = join(settings.BASE_DIR, '.git', 'refs', 'heads', 'master')
         if exists(master_path):
             with open(master_path, 'r', encoding='utf-8') as f:
                 current_code_ref = f.read().strip()
@@ -145,7 +145,7 @@ class BackupModule:
 
             ignore_patterns = ['^.git$', '^collect_static$', '^media$', '^uwsgi.sock$']
 
-            with open(join(settings.ROOT_DIR, '.gitignore')) as f:
+            with open(join(settings.BASE_DIR, '.gitignore')) as f:
                 for line in f:
                     if not line.startswith('\n') and not line.startswith('#'):
                         ignore_patterns.append(format_line(line))
@@ -153,7 +153,7 @@ class BackupModule:
             # create temp folder
             temp_folder = f'code_{self.project_name}'
             temp_folder_with_date = f'{temp_folder}_{self.now_str}'
-            temp_dir = join(settings.ROOT_DIR, temp_folder_with_date)
+            temp_dir = join(settings.BASE_DIR, temp_folder_with_date)
 
             if exists(temp_dir):
                 shutil.rmtree(temp_dir)
@@ -161,7 +161,7 @@ class BackupModule:
             os.mkdir(temp_dir)
             ignore_patterns.append(f'^{temp_folder}')
 
-            apply_func_to_file_in_folder(settings.ROOT_DIR, True, ignore_patterns, False, copy_file, temp_dir)
+            apply_func_to_file_in_folder(settings.BASE_DIR, True, ignore_patterns, False, copy_file, temp_dir)
 
             # create excluded collect_static and media folder
             os.mkdir(join(temp_dir, 'collect_static'))
@@ -173,7 +173,7 @@ class BackupModule:
                 pass
 
             # copy sbl plugins
-            with open(join(settings.ROOT_DIR, 'Pipfile'), 'r', encoding='utf-8') as f:
+            with open(join(settings.BASE_DIR, 'Pipfile'), 'r', encoding='utf-8') as f:
                 for line in f:
                     if 'VL_USERNAME' in line:
                         app = line.split(' ')[0]
@@ -184,7 +184,7 @@ class BackupModule:
             # archive temp_dir
             tar_name = f'code_{self.project_name}_{self.now_str}.tar.gz'
             tar_path = join(self.db_dir, tar_name)
-            p = Popen(f'tar -czf {tar_path} -C {settings.ROOT_DIR} {basename(temp_dir)}', stdout=out, stderr=out, shell=True)
+            p = Popen(f'tar -czf {tar_path} -C {settings.BASE_DIR} {basename(temp_dir)}', stdout=out, stderr=out, shell=True)
             p.wait()
 
             # delete temp_dir
@@ -225,7 +225,7 @@ class BackupModule:
         self.stat['backup_date'] = self.now_timestamp
 
         # get media size
-        self.stat['sizes']['media'] = get_size(join(settings.ROOT_DIR, 'media'))
+        self.stat['sizes']['media'] = get_size(join(settings.BASE_DIR, 'media'))
 
         # get code size
         self.stat['sizes']['code'] = 0
@@ -235,9 +235,9 @@ class BackupModule:
                 if item_name not in ('db', self.project_name):
                     self.stat['sizes']['code'] += get_size(join(self.common_dir, item_name))
 
-        for item_name in listdir(settings.ROOT_DIR):
+        for item_name in listdir(settings.BASE_DIR):
             if item_name not in ('media',):
-                self.stat['sizes']['code'] += get_size(join(settings.ROOT_DIR, item_name))
+                self.stat['sizes']['code'] += get_size(join(settings.BASE_DIR, item_name))
 
         self.stat['sizes']['code'] += get_size(self.venv_path)
 

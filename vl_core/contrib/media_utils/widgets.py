@@ -10,8 +10,6 @@ from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
 from file_resubmit.widgets import ResubmitImageWidget, ResubmitFileWidget
 
-from sass_processor.processor import sass_processor
-
 from vl_core.contrib.media_utils.conf import app_settings
 from vl_core.contrib.media_utils.thumb import thumb_from_field
 from vl_core.contrib.media_utils.utils import default_compress_settings
@@ -51,10 +49,10 @@ class PicMixin:
         return mark_safe(render_to_string('vl_media_utils/widgets/pic_input.html', {'text_input_html': text_input_html, 'pic_html': pic_html}))
 
     def _get_media(self):
-        css = [sass_processor('vl_media_utils/th.scss')]
+        css = ['vl_media_utils/th.css']
 
         if self.use_fb:
-            css.extend(['vl_media_utils/contrib/fancybox/fancybox.css', sass_processor('vl_media_utils/fb_wr.scss')])
+            css.extend(['vl_media_utils/contrib/fancybox/fancybox.css', 'vl_media_utils/fb_wr.css'])
 
         return Media(css={'screen': css})
 

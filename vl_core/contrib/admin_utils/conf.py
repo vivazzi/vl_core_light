@@ -5,7 +5,7 @@ from vl_core.conf import BaseAppSettings
 class AppSettings(BaseAppSettings):
     @property
     def ADMIN_TOOLS_THEMING_CSS(self):
-        return self._setting('VL_ADMIN_TOOLS_THEMING_CSS', 'vl_admin_utils/theming.scss')
+        return self._setting('VL_ADMIN_TOOLS_THEMING_CSS', 'vl_admin_utils/theming.css')
 
     @property
     def ADMIN_FAVICON_URL(self):

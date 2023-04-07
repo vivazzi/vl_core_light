@@ -57,7 +57,7 @@ def generate_sitemap_handler(request):
     if sitemap_set.get_static_urls():
         sitemaps.update({'static_urls': StaticSitemap})
 
-    with open(join(settings.ROOT_DIR, 'sitemap.xml'), 'w') as f:
+    with open(join(settings.BASE_DIR, 'sitemap.xml'), 'w') as f:
         if sitemaps:
             xml = sitemap(request, sitemaps)
             f.write(xml.rendered_content)
@@ -68,7 +68,7 @@ def generate_sitemap_handler(request):
 
 
 def get_robots_content():
-    path = join(settings.ROOT_DIR, 'robots.txt')
+    path = join(settings.BASE_DIR, 'robots.txt')
 
     if not exists(path):
         current_site = get_current_site(None)
@@ -81,12 +81,12 @@ def get_robots_content():
         mes = _('robots.txt created on the site "{}"').format(current_site.name)
         mail_admins(mes, _('{}. Previously, this file was missing or it was deleted').format(mes))
 
-    with open(join(settings.ROOT_DIR, 'robots.txt')) as f:
+    with open(join(settings.BASE_DIR, 'robots.txt')) as f:
         return f.read()
 
 
 def get_sitemap_content(request):
-    path = join(settings.ROOT_DIR, 'sitemap.xml')
+    path = join(settings.BASE_DIR, 'sitemap.xml')
     if not exists(path):
         generate_sitemap_handler(request)
         mes = _('Generated sitemap.xml on the site "{}"').format(get_current_site(None))
