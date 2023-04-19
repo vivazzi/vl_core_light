@@ -57,7 +57,7 @@ def generate_sitemap_handler(request):
     if sitemap_set.get_static_urls():
         sitemaps.update({'static_urls': StaticSitemap})
 
-    with open(join(settings.BASE_DIR, 'sitemap.xml'), 'w') as f:
+    with open(app_settings.SITEMAP_PATH, 'w') as f:
         if sitemaps:
             xml = sitemap(request, sitemaps)
             f.write(xml.rendered_content)
