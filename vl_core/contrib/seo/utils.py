@@ -68,29 +68,26 @@ def generate_sitemap_handler(request):
 
 
 def get_robots_content():
-    path = join(settings.BASE_DIR, 'robots.txt')
-
-    if not exists(path):
+    if not exists(app_settings.ROBOTS_PATH):
         current_site = get_current_site(None)
         robots_content = render_to_string('vl_seo/robots.txt', {'sitemap_path': app_settings.FULL_SITEMAP_PATH,
                                                                 'host': f'{core_app_settings.PROTOCOL}://{current_site.domain}'})
 
-        with open(path, 'w') as f:
+        with open(app_settings.ROBOTS_PATH, 'w') as f:
             f.write(robots_content)
 
         mes = _('robots.txt created on the site "{}"').format(current_site.name)
         mail_admins(mes, _('{}. Previously, this file was missing or it was deleted').format(mes))
 
-    with open(join(settings.BASE_DIR, 'robots.txt')) as f:
+    with open(app_settings.ROBOTS_PATH) as f:
         return f.read()
 
 
 def get_sitemap_content(request):
-    path = join(settings.BASE_DIR, 'sitemap.xml')
-    if not exists(path):
+    if not exists(app_settings.SITEMAP_PATH):
         generate_sitemap_handler(request)
         mes = _('Generated sitemap.xml on the site "{}"').format(get_current_site(None))
         mail_admins(mes, _('{}. Previously, this file was missing or it was deleted').format(mes))
 
-    with open(path) as f:
+    with open(app_settings.SITEMAP_PATH) as f:
         return f.read()
